@@ -1,0 +1,22 @@
+{
+  "name": "tcc_server",
+  "version": "1.0.0",
+  "description": "Servidor Restful para testes de performance",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thiagodoy/tcc_server.git"
+  },
+  "author": "Pedro e Thiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thiagodoy/tcc_server/issues"
+  },
+  "homepage": "https://github.com/Thiagodoy/tcc_server#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
