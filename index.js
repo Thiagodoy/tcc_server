@@ -12,28 +12,10 @@ var db = new sqlite3.cached.Database('./database/tcc_log.db3');
 var server = express();
 server.use(bodyParser.json());
 
-
-const listUser = [
-    { nome: 'Thiago Henrique de Godoy', profissao: 'Mecânico' },
-    { nome: 'Pedro', profissao: 'Pintor' },
-];
-
-server.get('/', (request, response) => {
-    response.send('Servidor no Ar!!');
-});
-
-server.get('/api/getUsers', (request, response) => {
-    response.send(listUser);
-
-});
-
-
 server.post('/log/save', (request, response) => {    
 
     let log = request.body;
-
     db.run(`INSERT INTO log ( interface, module, start_date, end_date, start_battery, end_battery) VALUES ('${log.interface}', '${log.module}', '${log.start_date}', '${log.end_date}', '${log.start_battery}', '${log.end_battery}')`);
-
     response.sendStatus(200);
 });
 
@@ -67,7 +49,13 @@ server.post('/uploads', (req, response) => {
     form.parse(req);
 });
 
-server.listen(9000, () => {
-    console.log('Servidor no ar');
+server.get('/download/:file',(request,response)=>{
 
+    let file = request.params.file;
+    let path = __dirname + '/download/' + file;
+    response.download(path);
+});
+
+server.listen(9001, () => {
+    console.log('Servidor no ar');
 });

@@ -1,0 +1,19 @@
+	Métrica e Recursos
+
+
+	Os computadores possuem uma grande disponibilidade de recursos, como memória RAM, processadores de última geração, armazenamento interno amplo, entre outros, os smartphones possuem maior limitação quanto a isso. Sendo assim, o desenvolvedor tem o desafio de criar aplicativos com um alto desempenho, consumindo o mínimo de recursos, mantendo o bom funcionamento do sistema.
+
+	Tendo em vista as limitações que os smartfones possui, para que possamos considerar que uma aplicação tenha um bom desempenho, escolhemos a seguintes métricas abaixo:
+
+	# Tempo
+	# Processamento
+	# Memória
+	# Bateria
+
+	Visando o uso dos recursos nativos que cada plataforma oferece, escolhemos analisar os mais usuais o que uma app minimamente deve prover ao seus usuarios. Segue:
+
+	# GPS    (FEITO)
+	# CAMERA
+	# CONTATOS
+	# UPLOAD/DOWLOAD FILES (FEITO) "TEXTO/IMAGEM/VIDEO"
+	# MEDIA
